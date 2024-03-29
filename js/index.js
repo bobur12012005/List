@@ -8,10 +8,12 @@ let nameRegex = /^[a-zA-Z]+(?:[\s-][a-zA-Z]+)*$/
 form.onsubmit = (e) => {
     e.preventDefault()
 
+    let fm = new FormData(form)
+
     let user = {
         id: Math.random(),
-        name: new FormData(form).get('name'),
-        year: new Date().getFullYear() - new FormData(form).get('age')
+        name: fm.get('name'),
+        year: new Date().getFullYear() - fm.get('age')
     }
 
     if (user.name !== '' && user.year >= 1900 && nameRegex.test(user.name)) {
