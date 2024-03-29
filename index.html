@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/index.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <form id="form" name="addBody">
+            <label for="name">
+                Name:
+                <input id="name" type="text" name="name">
+            </label>
+            <label for="age">
+                Age:
+                <input id="age" type="text" name="age">
+            </label>
+            <label>click<button id="add">Add</button></label>
+        </form>
+
+        <div class="top_elements">
+            <div class="top_num">No</div>
+            <div class="top_name">Name</div>
+            <div class="top_year">Year</div>
+            <div class="top_btns">Actions</div>
+        </div>
+
+        <div class="elements"></div>
+    </div>
+
+    <div id="modal">
+        <div id="content">
+            <span>Please, fill both of the fields correctly!</span>
+            <button id="ok">OK</button>
+        </div>
+    </div>
+
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
